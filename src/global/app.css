@@ -1,0 +1,11 @@
+/* Document Level Styles */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+:root {
+  --app-primary-color: #002776;
+  --ion-color-primary: #002776;
+}

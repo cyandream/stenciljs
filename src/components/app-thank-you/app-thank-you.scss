@@ -1,0 +1,163 @@
+.icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .check {
+      width: 200px;
+      height: 200px;
+      display:block;
+      margin:auto;
+  }
+
+  .toolbar-content-md{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .iconTitle{
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+  }
+
+ion-scroll {
+    padding: 15px;
+    text-align: center;  
+}
+
+
+.onlineWrapper{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    .circle {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px; 
+        background-color: yellow;
+        
+        &.online {
+          background-color: #3ecc3e;
+        }
+        &.offline{
+          background-color: red;
+        }
+    }
+
+    .text {
+      font-size: 10px;
+      padding-top: 5px;
+      color: #3ecc3e;
+      transition: all .2s ease-in-out;
+      &.offline:before {
+        content: "OFFLINE";
+        color: red;
+      }
+      &.online:before {
+        content: "ONLINE";
+        color: #3ecc3e;
+      }
+    }
+
+
+
+
+    @-webkit-keyframes pulse 
+  {       
+    0% {-webkit-transform: scale(0); opacity: 0;}
+    8% {-webkit-transform: scale(0); opacity: 0;}
+    15% {-webkit-transform: scale(0.1); opacity: 1;}
+    30% {-webkit-transform: scale(0.5); opacity: 1;}
+    100% {opacity: 0; -webkit-transform: scale(1);}
+  }
+
+  @-moz-keyframes pulse 
+  {       
+    0% {-moz-transform: scale(0); opacity: 0;}
+    8% {-moz-transform: scale(0); opacity: 0;}
+    15% {-moz-transform: scale(0.1); opacity: 1;}
+    30% {-moz-transform: scale(0.5); opacity: 1;}
+    100% {opacity: 0; -moz-transform: scale(1);}
+  }
+  
+  .pulse_holder
+  {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 350px;
+  }
+    
+  .onlineWrapper .circle
+  {
+    width: 15px;
+    height: 15px; 
+    background: #3ecc3e;
+    border-radius: 50%;
+  }
+ 
+  .onlineWrapper .circle .pulse_rays
+  {
+    margin: 0 auto;
+    border-radius: 100px;
+    position: absolute;
+    right: -10px;
+    top: -19px;
+    z-index: 10;
+    background-color: transparent;
+    opacity: 0.1;
+    width: 55px;
+    height: 55px;
+    border: 2px solid rgba(0, 128, 64, 1);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    /* Giving Animation Function */
+    -webkit-animation: pulse 2s linear;
+    -moz-animation: pulse 2s linear;
+    animation-iteration-count: 3; 
+    border-image: initial;
+  }
+
+  .checkboxContainer{
+      display: block;
+      text-align: center;
+      -webkit-animation: bounce 1.2s ease-out;
+      -moz-animation: bounce 800ms ease-out;
+      -o-animation: bounce 800ms ease-out;
+      animation: bounce 1.2s ease-out;
+  }
+
+  /* Webkit, Chrome and Safari */
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translate3d(0, 0, 0);  
+      }
+      30% {
+        transform: translate3d(0, 20px, 0);
+      }
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+}
+
+ion-footer {
+    ion-toolbar{
+        .toolbar-content{
+            display:flex;
+            align-items: center;
+        }
+    }  
+}
+
+  
+
